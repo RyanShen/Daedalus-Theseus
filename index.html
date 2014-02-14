@@ -11,42 +11,39 @@
             padding: 0;
             font-size: 12pt;
         }
-
-        #problemdisplay {
-            position: absolute;
-            margin-top: 10%;
-            width: 100%;
-        }
         #problemform {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 280px 2px 15px 295px;
+            width: 300px;
+			height: 100px;
         }
         #probleminput {
+			position: absolute;
             display: none;
-            width: 30%;
-            margin-left: 5.5%;
-            margin-right: 5.5%;
-            padding: 25px 1px 2px 2px;
+			top: 450px;
+			left: 240px;
+			height: 50px;
+            width: 350px;
         }
         #problemsubmit {
+            position: absolute;
             display: none;
-            width:5%;
-            padding: 15px 10px 8px 2px;
-        }
-        #prob_submit_msg {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
+            top: 530px;
+            left: 623px;
+            height: 40px;
+            width: 100px;
+            padding: 5px 10px 8px 2px;
         }
         #canvaswrapper {
-            margin: 15px;
             position: relative;
+            height: 768px;
+            width: 1024px;
+            display: block;
+            margin: auto;
+            margin-top: 80px;
+            vertical-align: middle;
+
         }
         #canvas {
-            position: absolute;
+
             left: 0;
             right: 0;
             top: 0;
@@ -60,15 +57,12 @@
     <script type="text/javascript" src="lib/game/main.js"></script>
 </head>
 <body>
-<canvas id="canvas" width="768" height="704"></canvas>
 <div id="canvaswrapper">
-    <div id="problemdisplay">
-        <div id="problemform" class="form-inline">
-            <input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
-            <button id="problemsubmit" class="btn" style="display: inline-block;"></button></div>
-    </div>
-    <div id="prob_submit_msg" style="display: block;"></div>
-</div>
+    <canvas id="canvas" width="1024" height="768"></canvas>
+	<div id="problemform" class="form-inline">
+		<input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
+		<button id="problemsubmit" class="btn" style="display: inline-block;">Submit</button>
+	</div>
 </div>
 </body>
 </html>

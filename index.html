@@ -23,6 +23,11 @@
 			left: 240px;
 			height: 50px;
             width: 350px;
+            border: 0px solid;
+            background:transparent;
+            background-repeat: repeat;
+            margin: 1px 1px 1px 5px;
+            color: cyan;
         }
         #problemsubmit {
             position: absolute;
@@ -33,6 +38,58 @@
             width: 100px;
             padding: 5px 10px 8px 2px;
         }
+        #prob_submit_mssg {
+            width: 30%;
+            display: none;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #disp_prob_title{
+            position: absolute;
+            COLOR:cyan;
+            align-content: center;
+            font-size:15px;
+            width: 55%;
+            top: 220px;
+            left: 240px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #disp_desc{
+            position: absolute;
+            COLOR:cyan;
+            font-size:10px;
+            width: 55%;
+            top: 235px;
+            left: 238px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #disp_hints{
+            position: absolute;
+            COLOR:cyan;
+            font-size:15px;
+            width: 55%;
+            top: 420px;
+            left: 220px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        #disp_score{
+            position: absolute;
+            COLOR:cyan;
+            font-size:15px;
+            width: 55%;
+            top: 470px;
+            left: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
         #canvaswrapper {
             position: relative;
             height: 768px;
@@ -41,29 +98,38 @@
             margin: auto;
             margin-top: 80px;
             vertical-align: middle;
-
         }
         #canvas {
-
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
         }
-
     </style>
+    <link href = "lib/toastr.css"  rel = "stylesheet"/>
     <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.slidingmessage.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.slidingmessage.js"></script>
+    <script type="text/javascript" src="lib/toastr.js"></script>
+    <script type="text/javascript" src="lib/toastr.min.js"></script>
     <script type="text/javascript" src="lib/impact/impact.js"></script>
     <script type="text/javascript" src="lib/game/main.js"></script>
 </head>
 <body>
 <div id="canvaswrapper">
     <canvas id="canvas" width="1024" height="768"></canvas>
+    <div id ="disp_prob_title" ></div>
+    <div id ="disp_hints" ></div>
+    <div id ="disp_desc" ></div>
+    <div id ="disp_score" ></div>
 	<div id="problemform" class="form-inline">
 		<input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
 		<button id="problemsubmit" class="btn" style="display: inline-block;">Submit</button>
 	</div>
+    <div id ="prob_submit_mssg"></div>
 </div>
+<script>
+</script>
 </body>
 </html>

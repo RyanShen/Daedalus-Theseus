@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Impact Game</title>
-	<style type="text/css">
-		html,body {
-			background-color: #333;
-			color: #fff;
-			font-family: helvetica, arial, sans-serif;
-			margin: 0;
-			padding: 0;
-			font-size: 12pt;
-		}
-		
-		#canvas {
+    <title>Impact Game</title>
+    <style type="text/css">
+        html,body {
+            background-color: #333;
+            color: #fff;
+            font-family: helvetica, arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12pt;
+        }
+        #problemform {
+            display: none;
+            width: 300px;
+			height: 100px;
+        }
+        #probleminput {
 			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			margin: auto;
-		}
-	</style>
+            display: none;
+			top: 450px;
+			left: 240px;
+			height: 50px;
+            width: 350px;
+        }
+        #problemsubmit {
+            position: absolute;
+            display: none;
+            top: 530px;
+            left: 623px;
+            height: 40px;
+            width: 100px;
+            padding: 5px 10px 8px 2px;
+        }
+        #canvaswrapper {
+            position: relative;
+            height: 768px;
+            width: 1024px;
+            display: block;
+            margin: auto;
+            margin-top: 80px;
+            vertical-align: middle;
 
-	<script type="text/javascript" src="lib/impact/impact.js"></script>
-	<script type="text/javascript" src="lib/game/main.js"></script>
+        }
+        #canvas {
+
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+    </style>
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/impact/impact.js"></script>
+    <script type="text/javascript" src="lib/game/main.js"></script>
 </head>
 <body>
-	<canvas id="canvas"></canvas>
+<div id="canvaswrapper">
+    <canvas id="canvas" width="1024" height="768"></canvas>
+	<div id="problemform" class="form-inline">
+		<input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
+		<button id="problemsubmit" class="btn" style="display: inline-block;">Submit</button>
+	</div>
+</div>
 </body>
 </html>

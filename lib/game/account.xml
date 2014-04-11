@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <player>
+            <user id = "shabi">'123'</user>
+            <avatar id = "">Default</avatar>
+            <team id = "1">
+                <teamMember id = "002">Apple</teamMember>
+                <teamMember id = "003">Orange</teamMember>
+                <teamMember id = "004">Banana</teamMember>
+                <teamMember id = "005">Berry</teamMember>
+                <teamMember id = "006">Grape</teamMember>
+            </team>
+        </player>

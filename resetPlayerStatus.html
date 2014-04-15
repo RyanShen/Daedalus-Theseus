@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>reset player status</title>
+    <script>
+        function myreset() {
+            $.ajax({
+                url: "http://128.2.239.135:3000/updatesession?u=xinghu",
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    aid: 3, /* avatar id: boy0 girl1 */
+                    tid: 1, /* team id */
+                    eid: 0,/* event id */
+                    level: '3_Tower_GroundFloor',
+                    pos: {x: 289.8876992821021, y: 326.6720780726261}
+                },
+                error: function (error, response, body) {
+                    console.log(body);
+                },
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        }
+    </script>
+</head>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<body onload="myreset()">
+
+</body>
+</html>

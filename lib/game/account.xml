@@ -2,7 +2,7 @@
         <player>
             <user id = "shabi">'123'</user>
             <avatar id = "">Default</avatar>
-            <team id = "1">
+            <team id = "3">
                 <teamMember id = "002">Apple</teamMember>
                 <teamMember id = "003">Orange</teamMember>
                 <teamMember id = "004">Banana</teamMember>

@@ -38,7 +38,6 @@
             display: none;
 			top: 448px;
 			left: 185px;
-			height: 94px;
             width: 370px;
             border: 0px solid;
             outline: none;
@@ -48,6 +47,8 @@
             background-repeat: repeat;
             margin: 1px 1px 1px 5px;
             color: cyan;
+            padding: 0 0 94px;
+            resize: none;
         }
         #problemsubmit {
             position: absolute;
@@ -141,7 +142,7 @@
     <div id ="disp_desc" ></div>
     <div id ="disp_score" ></div>
 	<div id="problemform" class="form-inline">
-		<input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
+		<textarea id="probleminput" class="form-inline" type="text" style="display: inline;"></textarea>
 		<button id="problemsubmit" class="btn" type="submit" style="display: inline-block;">Submit</button>
 	</div>
     <div id ="prob_submit_mssg"></div>

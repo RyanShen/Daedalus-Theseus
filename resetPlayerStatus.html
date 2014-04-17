@@ -27,7 +27,95 @@
     </script>
 </head>
 <script type="text/javascript" src="lib/jquery.min.js"></script>
-<body onload="myreset()">
+<body>
+
+<form id = "resetform">
+    <table>
+        <tr>
+            <td>Avatar:</td>
+            <td><input type = "radio" name = "avatar" value = "1">Boy</td>
+            <td><input type = "radio" name = "avatar" value = "0">Girl</td>
+            <td><input type = "radio" name = "avatar" value = "3">Not define</td>
+        </tr>
+    </table>
+    <table>
+        <tr><td>Position</td>
+            <td>x: <input type = "text" name = "x" value = "0j"></td><br>
+            <td>y: <input type = "text" name = "y"></td>
+        </tr>
+        <tr>
+            <td>Level:</td>
+            <td>
+                <select>
+                    <option value = "1_House_UpperFloor">House Upper Floor</option>
+                    <option value = "1_House_GroundFloor">House Group Floor</option>
+                    <option value = "2_PoliceHQ_GroundFloor">Police Office</option>
+                    <option value = "3_Tower_GroundFloor">Tower Group Floor</option>
+                    <option value = "3_Tower_TopFloor">Tower Top Floor</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Event:</td>
+            <td>
+                <select>
+                    <option value = "0">Game Start</option>
+                    <option value = "1">Father Gets Kidnapped</option>
+                    <option value = "2">(Downstaris)Player Looks For Father</option>
+                    <option value = "3">(Downstairs)Decides To Investigate Flash Drive</option>
+                    <option value = "4">Accesses Flash Drive</option>
+                    <option value = "5">Police Arrives</option>
+                    <option value = "6">(Downstairs)Leaves For PoliceHQ</option>
+                    <option value = "7">Arrives At PoliceHQ</option>
+                    <option value = "8">Gathers Enough Evidence</option>
+                    <option value = "9">Receives Call From Daedalus</option>
+                    <option value = "10">Arrives At Tower</option>
+                    <option value = "11">Heads to Boss Room</option>
+                    <option value = "12">Enter Boss Room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Team:</td>
+            <td><input type = "text" name = "team"></td>
+            <td>Reset Team Data</td>
+            <td><input type = "checkbox" name = "setTeam" value = "true">Reset</td>
+        </tr>
+        <tr>
+            <td>User:</td>
+            <td><input type = "text" name = "user"></td>
+        </tr>
+
+    </table>
+</form>
+
+<input type = "submit" value = "Submit">
+<script>
+    var form = $("#resetform").serialize();
+    console.log(form);
+    form.submit(function() {
+        $.ajax({
+            url: "http://128.2.239.135:3000/updatesession?u=user7",
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                aid: 3,
+                tid: 2,
+                eid: 0,
+                level: 0,
+                pos: {x:0, y: 0}
+            },
+            error: function (error, response, body) {
+                console.log(form);
+                console.log(body);
+            },
+            success: function (data) {
+                console.log(data);
+                console.log(form);
+            }
+        });
+    })
+</script>
 
 </body>
 </html>

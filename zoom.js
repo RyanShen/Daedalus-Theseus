@@ -44,7 +44,7 @@ window.utility = function(utility){
 	        utility.screen = utility.getBrowser();
 	        if(window.onresizeend) window.onresizeend (utility.screen);
 	        if(utility.onResize) utility.onResize(utility.screen);
-	    }               
+	    }
 	};
 	window.onresizeend = function(screen){
 	    if(screen.isZoomed)

@@ -1,4 +1,3 @@
-<script>
 window.utility = function(utility){
 	utility.screen = {
 	    rtime : new Date(1, 1, 2000, 12,00,00),
@@ -59,4 +58,3 @@ window.utility = function(utility){
 	});
 	return utility;
 }({});
-</script>

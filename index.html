@@ -11,6 +11,23 @@
             padding: 0;
             font-size: 12pt;
         }
+        a:link{
+            COLOR: YELLOW;
+            text-decoration: none;
+        }
+        a:visited{
+            COLOR: ORANGE;
+            text-decoration: none;
+        }
+        a:hover{
+            COLOR: GREEN;
+            text-decoration: none;
+        }
+        a:active{
+            COLOR: RED;
+            text-decoration: none;
+        }
+
         #problemform {
             display: none;
             width: 300px;
@@ -19,16 +36,20 @@
         #probleminput {
 			position: absolute;
             display: none;
-			top: 450px;
-			left: 200px;
-			height: 50px;
-            width: 350px;
+			top: 448px;
+			left: 185px;
+            width: 360px;
             border: 0px solid;
+            outline: none;
             font-size:20px;
+            font-family: Verdana;
             background:transparent;
             background-repeat: repeat;
             margin: 1px 1px 1px 5px;
             color: cyan;
+            padding: 8px 5px 38px;
+            resize: none;
+            overflow: hidden;
         }
         #problemsubmit {
             position: absolute;
@@ -51,6 +72,7 @@
             COLOR:cyan;
             align-content: center;
             font-size:20px;
+            font-family: Verdana;
             width: 55%;
             top: 220px;
             left: 215px;
@@ -62,6 +84,7 @@
             position: absolute;
             COLOR:cyan;
             font-size:16px;
+            font-family: Verdana;
             width: 55%;
             top: 255px;
             left: 215px;
@@ -120,7 +143,7 @@
     <div id ="disp_desc" ></div>
     <div id ="disp_score" ></div>
 	<div id="problemform" class="form-inline">
-		<input id="probleminput" class="form-inline" type="text" style="display: inline;"></input>
+		<textarea id="probleminput" class="form-inline" type="text" style="display: inline;"></textarea>
 		<button id="problemsubmit" class="btn" type="submit" style="display: inline-block;">Submit</button>
 	</div>
     <div id ="prob_submit_mssg"></div>

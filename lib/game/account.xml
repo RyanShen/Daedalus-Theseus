@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
         <player>
-            <user id = "shabi">'123'</user>
+            <user id = "user1">'123'</user>
             <avatar id = "">Default</avatar>
-            <team id = "1">
+            <team id = "3">
                 <teamMember id = "002">Apple</teamMember>
                 <teamMember id = "003">Orange</teamMember>
                 <teamMember id = "004">Banana</teamMember>

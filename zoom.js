@@ -12,6 +12,7 @@ window.utility = function(utility){
 	    screen.zoomf  = screen.zoom = 1;
 	    screen.width = window.screen.width;
 	    screen.height = window.screen.height;
+
 	    if($b.mozilla){ //FOR MOZILLA
 	        screen.isZoomed  = window.matchMedia('(max--moz-device-pixel-ratio:0.99), (min--moz-device-pixel-ratio:1.01)').matches;
 	    } else {

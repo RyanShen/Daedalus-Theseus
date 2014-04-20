@@ -6,15 +6,15 @@
     <script>
         function myreset() {
             $.ajax({
-                url: "http://128.2.239.135:3000/updatesession?u=user7",
+                url: "http://128.2.239.135:3000/updatesession?u=player1",
                 method: 'POST',
                 dataType: 'json',
                 data: {
                     aid: 3, /* avatar id: boy0 girl1 */
-                    tid: 2, /* team id */
+                    tid: 5, /* team id */
                     eid: 0,/* event id */
-                    level: '3_Tower_GroundFloor',
-                    pos: {x: 289.8876992821021, y: 326.6720780726261}
+                    level: '3_Tower_TopFloor',
+                    pos: {x: 660, y: 500}
                 },
                 error: function (error, response, body) {
                     console.log(body);

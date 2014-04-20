@@ -1,4 +1,3 @@
-<script>
 window.utility = function(utility){
 	utility.screen = {
 	    rtime : new Date(1, 1, 2000, 12,00,00),
@@ -13,6 +12,7 @@ window.utility = function(utility){
 	    screen.zoomf  = screen.zoom = 1;
 	    screen.width = window.screen.width;
 	    screen.height = window.screen.height;
+
 	    if($b.mozilla){ //FOR MOZILLA
 	        screen.isZoomed  = window.matchMedia('(max--moz-device-pixel-ratio:0.99), (min--moz-device-pixel-ratio:1.01)').matches;
 	    } else {
@@ -45,7 +45,7 @@ window.utility = function(utility){
 	        utility.screen = utility.getBrowser();
 	        if(window.onresizeend) window.onresizeend (utility.screen);
 	        if(utility.onResize) utility.onResize(utility.screen);
-	    }               
+	    }
 	};
 	window.onresizeend = function(screen){
 	    if(screen.isZoomed)
@@ -59,4 +59,3 @@ window.utility = function(utility){
 	});
 	return utility;
 }({});
-</script>

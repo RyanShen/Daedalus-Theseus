@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
         <player>
 
-            <user id = "player4">'123'</user>
+            <user id = "player1">'123'</user>
 
             <avatar id = "">Default</avatar>
             <team id = "3">

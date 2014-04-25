@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Impact Game</title>
+    <title>Theseus</title>
     <style type="text/css">
         html,body {
             background-color: #333;
@@ -28,16 +28,30 @@
             text-decoration: none;
         }
 
+        #learningPanel {
+            position: absolute;
+            display: none;
+            top: 180px;
+            left: 260px;
+            border: 0px solid;
+            outline: none;
+            font-size:20px;
+            font-family: Verdana;
+            resize: none;
+            overflow: hidden;
+        }
+
         #problemform {
             display: none;
             width: 300px;
-			height: 100px;
+            height: 100px;
         }
+
         #probleminput {
-			position: absolute;
+            position: absolute;
             display: none;
-			top: 448px;
-			left: 185px;
+            top: 448px;
+            left: 185px;
             width: 360px;
             border: 0px solid;
             outline: none;
@@ -49,8 +63,9 @@
             color: cyan;
             padding: 8px 5px 38px;
             resize: none;
-            overflow: hidden;
+            overflow-y: auto;
         }
+
         #problemsubmit {
             position: absolute;
             display: none;
@@ -60,6 +75,7 @@
             width: 100px;
             padding: 5px 10px 8px 2px;
         }
+
         #prob_submit_mssg {
             width: 30%;
             display: none;
@@ -67,6 +83,7 @@
             margin-right: auto;
             text-align: center;
         }
+
         #disp_prob_title{
             position: absolute;
             COLOR:cyan;
@@ -80,17 +97,20 @@
             margin-right: auto;
             text-align: center;
         }
+
         #disp_desc{
             position: absolute;
             COLOR:cyan;
             font-size:16px;
             font-family: Verdana;
             width: 55%;
+            height: 100px;
             top: 255px;
             left: 215px;
             margin-left: auto;
             margin-right: auto;
             text-align: left;
+            overflow-y: auto;
         }
         #disp_hints{
             position: absolute;
@@ -138,14 +158,15 @@
 <body>
 <div id="canvaswrapper">
     <canvas id="canvas" width="1024" height="768"></canvas>
+    <iframe id="learningPanel" width="505" height="380" src="//www.youtube.com/embed/CCxCMfQHa7E" allowfullscreen></iframe>
     <div id ="disp_prob_title" ></div>
     <div id ="disp_hints" ></div>
     <div id ="disp_desc" ></div>
     <div id ="disp_score" ></div>
-	<div id="problemform" class="form-inline">
-		<textarea id="probleminput" class="form-inline" type="text" style="display: inline;"></textarea>
-		<button id="problemsubmit" class="btn" type="submit" style="display: inline-block;">Submit</button>
-	</div>
+    <div id="problemform" class="form-inline">
+        <textarea id="probleminput" class="form-inline" type="text" style="display: inline;"></textarea>
+        <button id="problemsubmit" class="btn" type="submit" style="display: inline-block;">Submit</button>
+    </div>
     <div id ="prob_submit_mssg"></div>
 </div>
 <script>
